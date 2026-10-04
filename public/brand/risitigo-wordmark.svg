@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72">
+  <rect width="300" height="72" rx="20" fill="#14213D"/>
+  <rect x="14" y="12" width="48" height="48" rx="14" fill="#fff"/>
+  <path d="M29 22h16l5 5v25H29z" fill="#fff" stroke="#14213D" stroke-width="2"/>
+  <path d="M44 22v8h7M33 37h14M33 44h10" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="51" cy="51" r="8" fill="#FCA311"/><path d="M47 51l2.5 2.4 4.8-5" stroke="#14213D" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="78" y="47" font-family="Inter,Arial,sans-serif" font-size="31" font-weight="800" fill="#fff">Risiti</text>
+  <text x="160" y="47" font-family="Inter,Arial,sans-serif" font-size="31" font-weight="800" fill="#FCA311">Go</text>
+</svg>

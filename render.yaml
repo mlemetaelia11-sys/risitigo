@@ -1,0 +1,50 @@
+services:
+  - type: web
+    name: risitigo
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_URL
+        sync: false
+      - key: DATA_FILE
+        value: /var/data/risitigo/db.json
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PESAPAL_ENVIRONMENT
+        value: production
+      - key: PESAPAL_CONSUMER_KEY
+        sync: false
+      - key: PESAPAL_CONSUMER_SECRET
+        sync: false
+      - key: PESAPAL_IPN_ID
+        sync: false
+      - key: PESAPAL_IPN_URL
+        sync: false
+      - key: PESAPAL_CALLBACK_URL
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        sync: false
+      - key: R2_ACCOUNT_ID
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_BUCKET_NAME
+        sync: false
+      - key: R2_PUBLIC_BASE_URL
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+    disk:
+      name: risitigo-data
+      mountPath: /var/data
+      sizeGB: 1

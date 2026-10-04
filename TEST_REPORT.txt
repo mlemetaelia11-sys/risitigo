@@ -1,0 +1,24 @@
+RisitiGo Vercel Production Readiness Test Report
+Date: 2026-10-04
+
+PASS: 5/5 application tests
+PASS: required-file check
+PASS: local HTTP /health = 200
+PASS: local / = 200
+PASS: local /styles.css = 200
+PASS: local /app.js = 200
+PASS: first user role = PLATFORM_ADMIN
+PASS: second user role = OWNER
+PASS: server-side Free plan limits / feature gates
+PASS: PesaPal mocked API 3 payload/status flow
+PASS: PostgreSQL adapter syntax and local fallback import path
+PASS: Vercel entrypoint src/server.ts present
+PASS: package engines pinned to Node 24.x
+
+NOT LIVE-VERIFIED HERE:
+- Neon connection (requires your DATABASE_URL)
+- Live PesaPal sandbox/production transaction (requires your PesaPal credentials + public APP_URL)
+- Resend live delivery (requires RESEND_API_KEY)
+
+Production launch path:
+GitHub -> Vercel -> Neon -> set env vars -> deploy -> /health -> register PesaPal IPN -> sandbox payment -> verify subscription activation.
